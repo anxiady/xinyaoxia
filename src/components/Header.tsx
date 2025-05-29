@@ -20,30 +20,30 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      isScrolled ? "bg-black/80 backdrop-blur-md" : "bg-transparent"
     }`}>
-      <div className="max-w-6xl mx-auto px-6 py-4">
+      <div className="max-w-6xl mx-auto px-8 py-6">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-semibold tracking-tight text-gray-900">
-            Alex Johnson
+          <div className="text-lg font-light tracking-widest text-white">
+            AJ
           </div>
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-12">
             <button 
               onClick={() => scrollToSection("projects")}
-              className="text-gray-600 hover:text-gray-900 transition-colors"
+              className="text-gray-400 hover:text-white transition-colors duration-300 text-sm tracking-wide"
             >
-              Projects
+              Work
             </button>
             <button 
               onClick={() => scrollToSection("experience")}
-              className="text-gray-600 hover:text-gray-900 transition-colors"
+              className="text-gray-400 hover:text-white transition-colors duration-300 text-sm tracking-wide"
             >
-              Experience
+              About
             </button>
             <button 
               onClick={() => scrollToSection("contact")}
-              className="text-gray-600 hover:text-gray-900 transition-colors"
+              className="text-gray-400 hover:text-white transition-colors duration-300 text-sm tracking-wide"
             >
               Contact
             </button>

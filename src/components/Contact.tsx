@@ -1,30 +1,28 @@
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 px-6 bg-gray-900">
+    <section id="contact" className="py-32 px-8">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl font-light text-white mb-6">Let's Work Together</h2>
-        <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-          I'm always interested in new opportunities and collaborations. 
-          Whether you have a project in mind or just want to connect, I'd love to hear from you.
-        </p>
+        <h2 className="text-3xl font-thin text-white tracking-widest mb-8">GET IN TOUCH</h2>
+        <div className="w-16 h-px bg-white/30 mx-auto mb-16"></div>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="space-y-8">
           <a 
             href="mailto:alex@example.com" 
-            className="px-8 py-3 bg-white text-gray-900 rounded-full hover:bg-gray-100 transition-colors"
+            className="inline-block group"
           >
-            Get In Touch
+            <span className="text-lg text-gray-400 hover:text-white transition-colors duration-300 tracking-wider">
+              alex@example.com
+            </span>
+            <div className="h-px bg-gray-400 group-hover:bg-white transition-colors duration-300 mt-1"></div>
           </a>
-          <div className="flex space-x-6">
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">
-              LinkedIn
+          
+          <div className="flex justify-center space-x-12 pt-8">
+            <a href="#" className="text-gray-500 hover:text-white transition-colors duration-300 text-sm tracking-wider">
+              LINKEDIN
             </a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">
-              GitHub
-            </a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">
-              Twitter
+            <a href="#" className="text-gray-500 hover:text-white transition-colors duration-300 text-sm tracking-wider">
+              GITHUB
             </a>
           </div>
         </div>
