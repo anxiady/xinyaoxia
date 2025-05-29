@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,5 +98,47 @@
 
   body {
     @apply bg-background text-foreground;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+
+  /* 3D spatial effects */
+  .transform-gpu {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    will-change: transform;
+  }
+
+  /* Floating animation keyframes */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) translateZ(var(--float-z, 0px));
+    }
+    50% {
+      transform: translateY(-10px) translateZ(var(--float-z, 0px));
+    }
+  }
+
+  @keyframes floatSlow {
+    0%, 100% {
+      transform: translateY(0px) translateZ(var(--float-z, 0px));
+    }
+    50% {
+      transform: translateY(-5px) translateZ(var(--float-z, 0px));
+    }
+  }
+
+  /* Apply floating animations */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-float-slow {
+    animation: floatSlow 6s ease-in-out infinite;
+  }
+
+  /* Enhanced depth with shadows */
+  .depth-shadow {
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5)) drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
   }
 }
