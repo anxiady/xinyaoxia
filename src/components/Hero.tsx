@@ -2,8 +2,18 @@
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-8 relative overflow-hidden">
-      {/* Background layer with subtle gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-900/50 to-black"></div>
+      {/* Background image with blur effect */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1473177104440-ffee2f376098?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+          filter: 'blur(8px) brightness(0.3)',
+          transform: 'scale(1.1)'
+        }}
+      ></div>
+      
+      {/* Dark overlay for better text contrast */}
+      <div className="absolute inset-0 bg-black/60"></div>
       
       <div className="text-center space-y-8 relative z-10">
         <div className="space-y-4">
